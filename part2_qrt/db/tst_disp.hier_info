@@ -1,0 +1,154 @@
+|tst_ram
+address[0] => ram32x4:main_ram.address[0]
+address[1] => ram32x4:main_ram.address[1]
+address[2] => ram32x4:main_ram.address[2]
+address[3] => ram32x4:main_ram.address[3]
+address[4] => ram32x4:main_ram.address[4]
+clk => ram32x4:main_ram.clock
+data[0] => ram32x4:main_ram.data[0]
+data[1] => ram32x4:main_ram.data[1]
+data[2] => ram32x4:main_ram.data[2]
+data[3] => ram32x4:main_ram.data[3]
+wren => ram32x4:main_ram.wren
+q[0] << display_7seg:main_disp.out_disp[0]
+q[1] << display_7seg:main_disp.out_disp[1]
+q[2] << display_7seg:main_disp.out_disp[2]
+q[3] << display_7seg:main_disp.out_disp[3]
+q[4] << display_7seg:main_disp.out_disp[4]
+q[5] << display_7seg:main_disp.out_disp[5]
+q[6] << display_7seg:main_disp.out_disp[6]
+
+
+|tst_ram|ram32x4:main_ram
+address[0] => altsyncram:altsyncram_component.address_a[0]
+address[1] => altsyncram:altsyncram_component.address_a[1]
+address[2] => altsyncram:altsyncram_component.address_a[2]
+address[3] => altsyncram:altsyncram_component.address_a[3]
+address[4] => altsyncram:altsyncram_component.address_a[4]
+clock => altsyncram:altsyncram_component.clock0
+data[0] => altsyncram:altsyncram_component.data_a[0]
+data[1] => altsyncram:altsyncram_component.data_a[1]
+data[2] => altsyncram:altsyncram_component.data_a[2]
+data[3] => altsyncram:altsyncram_component.data_a[3]
+wren => altsyncram:altsyncram_component.wren_a
+q[0] <= altsyncram:altsyncram_component.q_a[0]
+q[1] <= altsyncram:altsyncram_component.q_a[1]
+q[2] <= altsyncram:altsyncram_component.q_a[2]
+q[3] <= altsyncram:altsyncram_component.q_a[3]
+
+
+|tst_ram|ram32x4:main_ram|altsyncram:altsyncram_component
+wren_a => altsyncram_hvv3:auto_generated.wren_a
+rden_a => ~NO_FANOUT~
+wren_b => ~NO_FANOUT~
+rden_b => ~NO_FANOUT~
+data_a[0] => altsyncram_hvv3:auto_generated.data_a[0]
+data_a[1] => altsyncram_hvv3:auto_generated.data_a[1]
+data_a[2] => altsyncram_hvv3:auto_generated.data_a[2]
+data_a[3] => altsyncram_hvv3:auto_generated.data_a[3]
+data_b[0] => ~NO_FANOUT~
+address_a[0] => altsyncram_hvv3:auto_generated.address_a[0]
+address_a[1] => altsyncram_hvv3:auto_generated.address_a[1]
+address_a[2] => altsyncram_hvv3:auto_generated.address_a[2]
+address_a[3] => altsyncram_hvv3:auto_generated.address_a[3]
+address_a[4] => altsyncram_hvv3:auto_generated.address_a[4]
+address_b[0] => ~NO_FANOUT~
+addressstall_a => ~NO_FANOUT~
+addressstall_b => ~NO_FANOUT~
+clock0 => altsyncram_hvv3:auto_generated.clock0
+clock1 => ~NO_FANOUT~
+clocken0 => ~NO_FANOUT~
+clocken1 => ~NO_FANOUT~
+clocken2 => ~NO_FANOUT~
+clocken3 => ~NO_FANOUT~
+aclr0 => ~NO_FANOUT~
+aclr1 => ~NO_FANOUT~
+byteena_a[0] => ~NO_FANOUT~
+byteena_b[0] => ~NO_FANOUT~
+q_a[0] <= altsyncram_hvv3:auto_generated.q_a[0]
+q_a[1] <= altsyncram_hvv3:auto_generated.q_a[1]
+q_a[2] <= altsyncram_hvv3:auto_generated.q_a[2]
+q_a[3] <= altsyncram_hvv3:auto_generated.q_a[3]
+q_b[0] <= <GND>
+eccstatus[0] <= <GND>
+eccstatus[1] <= <GND>
+eccstatus[2] <= <GND>
+
+
+|tst_ram|ram32x4:main_ram|altsyncram:altsyncram_component|altsyncram_hvv3:auto_generated
+address_a[0] => ram_block1a0.PORTAADDR
+address_a[0] => ram_block1a1.PORTAADDR
+address_a[0] => ram_block1a2.PORTAADDR
+address_a[0] => ram_block1a3.PORTAADDR
+address_a[1] => ram_block1a0.PORTAADDR1
+address_a[1] => ram_block1a1.PORTAADDR1
+address_a[1] => ram_block1a2.PORTAADDR1
+address_a[1] => ram_block1a3.PORTAADDR1
+address_a[2] => ram_block1a0.PORTAADDR2
+address_a[2] => ram_block1a1.PORTAADDR2
+address_a[2] => ram_block1a2.PORTAADDR2
+address_a[2] => ram_block1a3.PORTAADDR2
+address_a[3] => ram_block1a0.PORTAADDR3
+address_a[3] => ram_block1a1.PORTAADDR3
+address_a[3] => ram_block1a2.PORTAADDR3
+address_a[3] => ram_block1a3.PORTAADDR3
+address_a[4] => ram_block1a0.PORTAADDR4
+address_a[4] => ram_block1a1.PORTAADDR4
+address_a[4] => ram_block1a2.PORTAADDR4
+address_a[4] => ram_block1a3.PORTAADDR4
+clock0 => ram_block1a0.CLK0
+clock0 => ram_block1a1.CLK0
+clock0 => ram_block1a2.CLK0
+clock0 => ram_block1a3.CLK0
+data_a[0] => ram_block1a0.PORTADATAIN
+data_a[1] => ram_block1a1.PORTADATAIN
+data_a[2] => ram_block1a2.PORTADATAIN
+data_a[3] => ram_block1a3.PORTADATAIN
+q_a[0] <= ram_block1a0.PORTADATAOUT
+q_a[1] <= ram_block1a1.PORTADATAOUT
+q_a[2] <= ram_block1a2.PORTADATAOUT
+q_a[3] <= ram_block1a3.PORTADATAOUT
+wren_a => ram_block1a0.PORTAWE
+wren_a => ram_block1a1.PORTAWE
+wren_a => ram_block1a2.PORTAWE
+wren_a => ram_block1a3.PORTAWE
+
+
+|tst_ram|display_7seg:main_disp
+input_disp[0] => Mux0.IN19
+input_disp[0] => Mux1.IN19
+input_disp[0] => Mux2.IN19
+input_disp[0] => Mux3.IN19
+input_disp[0] => Mux4.IN19
+input_disp[0] => Mux5.IN19
+input_disp[0] => Mux6.IN19
+input_disp[1] => Mux0.IN18
+input_disp[1] => Mux1.IN18
+input_disp[1] => Mux2.IN18
+input_disp[1] => Mux3.IN18
+input_disp[1] => Mux4.IN18
+input_disp[1] => Mux5.IN18
+input_disp[1] => Mux6.IN18
+input_disp[2] => Mux0.IN17
+input_disp[2] => Mux1.IN17
+input_disp[2] => Mux2.IN17
+input_disp[2] => Mux3.IN17
+input_disp[2] => Mux4.IN17
+input_disp[2] => Mux5.IN17
+input_disp[2] => Mux6.IN17
+input_disp[3] => Mux0.IN16
+input_disp[3] => Mux1.IN16
+input_disp[3] => Mux2.IN16
+input_disp[3] => Mux3.IN16
+input_disp[3] => Mux4.IN16
+input_disp[3] => Mux5.IN16
+input_disp[3] => Mux6.IN16
+out_disp[0] <= Mux6.DB_MAX_OUTPUT_PORT_TYPE
+out_disp[1] <= Mux5.DB_MAX_OUTPUT_PORT_TYPE
+out_disp[2] <= Mux4.DB_MAX_OUTPUT_PORT_TYPE
+out_disp[3] <= Mux3.DB_MAX_OUTPUT_PORT_TYPE
+out_disp[4] <= Mux2.DB_MAX_OUTPUT_PORT_TYPE
+out_disp[5] <= Mux1.DB_MAX_OUTPUT_PORT_TYPE
+out_disp[6] <= Mux0.DB_MAX_OUTPUT_PORT_TYPE
+
+

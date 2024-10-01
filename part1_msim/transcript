@@ -1,0 +1,147 @@
+# Compile of ram32x4.vhd was successful.
+# Compile of tst_ram.vhd was successful.
+# 2 compiles, 0 failed with no errors.
+vsim -gui work.tst_ram
+# vsim -gui work.tst_ram 
+# Start time: 14:16:03 on Oct 01,2024
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading work.tst_ram(behaviour)
+# Loading altera_mf.altera_mf_components
+# Loading work.ram32x4(syn)
+# Loading ieee.std_logic_arith(body)
+# Loading ieee.std_logic_unsigned(body)
+# Loading altera_mf.altera_common_conversion(body)
+# Loading altera_mf.altera_device_families(body)
+# Loading altera_mf.altsyncram(translated)
+add wave -position insertpoint sim:/tst_ram/*
+force -freeze sim:/tst_ram/clk 0 0
+# Compile of ram32x4.vhd was successful.
+# Compile of tst_ram.vhd was successful.
+# Compile of testbench.vhd failed with 4 errors.
+# 3 compiles, 1 failed with 4 errors.
+# Compile of ram32x4.vhd was successful.
+# Compile of testbench.vhd failed with 4 errors.
+# Compile of part1.vhd was successful.
+# 3 compiles, 1 failed with 4 errors.
+# Compile of ram32x4.vhd was successful.
+# Compile of testbench.vhd failed with 2 errors.
+# Compile of part1.vhd was successful.
+# 3 compiles, 1 failed with 2 errors.
+# Compile of ram32x4.vhd was successful.
+# Compile of testbench.vhd failed with 5 errors.
+# Compile of part1.vhd was successful.
+# 3 compiles, 1 failed with 5 errors.
+# Compile of ram32x4.vhd was successful.
+# Compile of testbench.vhd was successful.
+# Compile of part1.vhd was successful.
+# 3 compiles, 0 failed with no errors.
+vsim -gui work.testbench
+# End time: 14:27:17 on Oct 01,2024, Elapsed time: 0:11:14
+# Errors: 0, Warnings: 0
+# vsim -gui work.testbench 
+# Start time: 14:27:17 on Oct 01,2024
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading work.testbench(tb)
+# Loading ieee.numeric_std(body)
+# Loading work.part1(behaviour)
+# ** Fatal: (vsim-3817) Port "clk" of entity "part1" is not in the component being instantiated.
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/UUT File: C:/Users/15491959/Desktop/emmblck/part1_msim/part1.vhd Line: 8
+# FATAL ERROR while loading design
+# Error loading design
+# End time: 14:27:18 on Oct 01,2024, Elapsed time: 0:00:01
+# Errors: 1, Warnings: 0
+# Compile of ram32x4.vhd was successful.
+# Compile of testbench.vhd was successful.
+# Compile of part1.vhd failed with 5 errors.
+# 3 compiles, 1 failed with 5 errors.
+# Compile of ram32x4.vhd was successful.
+# Compile of testbench.vhd was successful.
+# Compile of part1.vhd was successful.
+# 3 compiles, 0 failed with no errors.
+vsim -gui work.testbench
+# vsim -gui work.testbench 
+# Start time: 14:29:33 on Oct 01,2024
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading work.testbench(tb)
+# Loading ieee.numeric_std(body)
+# Loading work.part1(behaviour)
+# Loading altera_mf.altera_mf_components
+# Loading work.ram32x4(syn)
+# Loading ieee.std_logic_arith(body)
+# Loading ieee.std_logic_unsigned(body)
+# Loading altera_mf.altera_common_conversion(body)
+# Loading altera_mf.altera_device_families(body)
+# Loading altera_mf.altsyncram(translated)
+add wave -position insertpoint sim:/testbench/*
+run
+run
+rub
+# invalid command name "rub"
+run
+run
+noforce sim:/testbench/clk_tb
+force -freeze sim:/testbench/clk_tb 1 0
+run
+run
+force -freeze sim:/testbench/wren_tb 1 0
+run
+force -freeze sim:/testbench/addr_tb 00001 0
+force -freeze sim:/testbench/addr_tb 10101 0
+run
+force -freeze sim:/testbench/din_tb 0001 0
+run
+force -freeze sim:/testbench/wren_tb 1 0
+run
+force -freeze sim:/testbench/clk_tb 0 0
+run
+force -freeze sim:/testbench/dout_tb 10101 0
+# Value length (5) does not equal array index length (4).
+# 
+# ** Error: (vsim-4011) Invalid force value: 10101 0.
+# 
+run
+force -freeze sim:/testbench/clk_tb 1 0
+run
+force -freeze sim:/testbench/addr_tb 00000 0
+run
+run
+force -freeze sim:/testbench/clk_tb 0 0
+run
+force -freeze sim:/testbench/clk_tb 1 0
+run
+force -freeze sim:/testbench/din_tb 0000 0
+run
+force -freeze sim:/testbench/clk_tb 1 0, 0 {50 ps} -r 100
+run
+run
+run
+force -freeze sim:/testbench/addr_tb 10101 0
+run
+run
+run
+force -freeze sim:/testbench/wren_tb 0 0
+run
+run
+run
+force -freeze sim:/testbench/wren_tb 1 0
+force -freeze sim:/testbench/din_tb 1110 0
+run
+run
+force -freeze sim:/testbench/wren_tb 0 0
+run
+force -freeze sim:/testbench/addr_tb 10100 0
+run
+run
+force -freeze sim:/testbench/addr_tb 10101 0
+run
+run
+run
+# End time: 14:38:52 on Oct 01,2024, Elapsed time: 0:09:19
+# Errors: 2, Warnings: 0

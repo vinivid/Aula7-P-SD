@@ -1,0 +1,172 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+dC:/intelFPGA/19.1
+Epart1
+Z0 w1727803757
+Z1 DPx4 ieee 11 numeric_std 0 22 :ASDNFgHXf_ih3J@9F3Ze1
+Z2 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z3 DPx4 ieee 14 std_logic_1164 0 22 eNV`TJ_GofJTzYa?f<@Oe1
+Z4 dC:/Users/15491959/Desktop/emmblck/part1_msim
+Z5 8C:/Users/15491959/Desktop/emmblck/part1_msim/part1.vhd
+Z6 FC:/Users/15491959/Desktop/emmblck/part1_msim/part1.vhd
+l0
+L5
+VS?1K28INX3O3j@DCQ5ooW3
+!s100 DGTK?8fV3ZLRfBQ7GieLJ3
+Z7 OV;C;10.5b;63
+32
+Z8 !s110 1727803764
+!i10b 1
+Z9 !s108 1727803764.000000
+Z10 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/15491959/Desktop/emmblck/part1_msim/part1.vhd|
+Z11 !s107 C:/Users/15491959/Desktop/emmblck/part1_msim/part1.vhd|
+!i113 1
+Z12 o-work work -2002 -explicit
+Z13 tExplicit 1 CvgOpt 0
+Abehaviour
+R1
+R2
+R3
+DEx4 work 5 part1 0 22 S?1K28INX3O3j@DCQ5ooW3
+l27
+L16
+V?Sc3k6z5_7?@1PhSJVn9:3
+!s100 CfJI:36aCmz1If?Nnefai3
+R7
+32
+R8
+!i10b 1
+R9
+R10
+R11
+!i113 1
+R12
+R13
+Eram32x4
+Z14 w1727801301
+Z15 DPx9 altera_mf 20 altera_mf_components 0 22 @6M>I48X_jBQDo@?W=TN93
+R2
+R3
+R4
+Z16 8C:/Users/15491959/Desktop/emmblck/part1_msim/ram32x4.vhd
+Z17 FC:/Users/15491959/Desktop/emmblck/part1_msim/ram32x4.vhd
+l0
+L43
+VfUhhXH;Y?Hbn]KCm<EBEj3
+!s100 3<Y4N>RfzVJ`2TWR<S_A?3
+R7
+32
+R8
+!i10b 1
+R9
+Z18 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/15491959/Desktop/emmblck/part1_msim/ram32x4.vhd|
+Z19 !s107 C:/Users/15491959/Desktop/emmblck/part1_msim/ram32x4.vhd|
+!i113 1
+R12
+R13
+Asyn
+R15
+R2
+R3
+DEx4 work 7 ram32x4 0 22 fUhhXH;Y?Hbn]KCm<EBEj3
+l59
+L55
+V?<7>]2X1GXGaF5^KzF7`W1
+!s100 Fjo?Z[gY>V6?^HQWRS]6f1
+R7
+32
+R8
+!i10b 1
+R9
+R18
+R19
+!i113 1
+R12
+R13
+Etestbench
+Z20 w1727803614
+R2
+R3
+R4
+Z21 8C:/Users/15491959/Desktop/emmblck/part1_msim/testbench.vhd
+Z22 FC:/Users/15491959/Desktop/emmblck/part1_msim/testbench.vhd
+l0
+L5
+V?2YjTScLOJeUN[N>LL55g3
+!s100 UbMRTfaOdmjP^do9Mnf5Z3
+R7
+32
+R8
+!i10b 1
+R9
+Z23 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/15491959/Desktop/emmblck/part1_msim/testbench.vhd|
+Z24 !s107 C:/Users/15491959/Desktop/emmblck/part1_msim/testbench.vhd|
+!i113 1
+R12
+R13
+Atb
+R2
+R3
+DEx4 work 9 testbench 0 22 ?2YjTScLOJeUN[N>LL55g3
+l24
+L8
+V?bO_GT09FIz3@0bnoZN:e1
+!s100 M;<6JQ94@ZOV5>XFVE?D<0
+R7
+32
+R8
+!i10b 1
+R9
+R23
+R24
+!i113 1
+R12
+R13
+Etst_ram
+Z25 w1727802033
+R1
+R2
+R3
+R4
+Z26 8C:/Users/15491959/Desktop/emmblck/part1_msim/tst_ram.vhd
+Z27 FC:/Users/15491959/Desktop/emmblck/part1_msim/tst_ram.vhd
+l0
+L5
+VzJLeg4Q:gU?^1ST3]bWC;0
+!s100 ioYkJB`FWfNHGb^CA@:3n2
+R7
+32
+Z28 !s110 1727803272
+!i10b 1
+Z29 !s108 1727803272.000000
+Z30 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/15491959/Desktop/emmblck/part1_msim/tst_ram.vhd|
+Z31 !s107 C:/Users/15491959/Desktop/emmblck/part1_msim/tst_ram.vhd|
+!i113 1
+R12
+R13
+Abehaviour
+R1
+R2
+R3
+DEx4 work 7 tst_ram 0 22 zJLeg4Q:gU?^1ST3]bWC;0
+l27
+L16
+V]zjEB9jh8NEbL176>mJEA1
+!s100 iW>jQ?^VJbYd]]VY[U44i0
+R7
+32
+R28
+!i10b 1
+R29
+R30
+R31
+!i113 1
+R12
+R13
