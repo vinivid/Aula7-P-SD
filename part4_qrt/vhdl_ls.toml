@@ -1,0 +1,21 @@
+[libraries]
+
+lib5.files = [
+    'rollcounter.vhd',
+]
+
+lib4.files = [
+    'tuddo.vhd',
+]
+
+lib3.files = [
+    'counter.vhd',
+]
+
+lib2.files = [
+    'display_7seg.vhd',
+]
+
+lib1.files = [
+    'ram32x4.vhd',
+]
