@@ -8,8 +8,10 @@ entity mem_tst is
 		clk : IN STD_LOGIC;
 		data : IN STD_LOGIC_VECTOR (3 downto 0);
 		wren : IN STD_LOGIC;
-		q : OUT STD_LOGIC_VECTOR (6 downto 0)
-		
+		q : OUT STD_LOGIC_VECTOR (6 downto 0);
+		data_disp : OUT STD_LOGIC_VECTOR (6 downto 0);
+		adr1 : OUT STD_LOGIC_VECTOR (6 downto 0);
+		adr2 : OUT STD_LOGIC_VECTOR (6 downto 0)
 	);
 
 end entity mem_tst;
@@ -34,6 +36,8 @@ ARCHITECTURE Behaviour of mem_tst IS
 	end component;
 	
 	signal middle_q : STD_LOGIC_VECTOR (3 downto 0);
+	signal addres_right : STD_LOgIC_VECTOR (3 downto 0) := (others => '0');
+	signal addres_left : STD_LOGIC_VECTOR (3 downto 0) := (others => '0');
 
 BEGIN
 	main_ram : ram32x4 
@@ -50,6 +54,28 @@ BEGIN
 		input_disp => middle_q,
 		out_disp => q
 	);
+	
+	data_dispdd : display_7seg
+	port map (
+		input_disp => data,
+		out_disp => data_disp
+	);
+	
+	addres_right <= address (3 downto 0);
+	addres_left(0) <= address(4); 
+	
+	addrs_disp1 : display_7seg
+	port map (
+		input_disp => addres_right,
+		out_disp => adr1
+	);
+	
+	addrs_disp2 : display_7seg
+	port map (
+		input_disp => addres_left,
+		out_disp => adr2
+	);
+	
 
 END ARCHITECTURE;
 

@@ -1,11 +1,11 @@
-Analysis & Synthesis Status : Successful - Tue Oct  1 15:15:15 2024
+Analysis & Synthesis Status : Successful - Tue Oct  8 16:19:43 2024
 Quartus Prime Version : 21.1.0 Build 842 10/21/2021 SJ Lite Edition
 Revision Name : tst_disp
 Top-level Entity Name : tst_ram
 Family : Cyclone V
 Logic utilization (in ALMs) : N/A
 Total registers : 0
-Total pins : 18
+Total pins : 39
 Total virtual pins : 0
 Total block memory bits : 128
 Total DSP Blocks : 0

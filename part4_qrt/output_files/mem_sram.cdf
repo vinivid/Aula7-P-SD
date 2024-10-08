@@ -4,7 +4,7 @@ JedecChain;
 	DefaultMfr(6E);
 
 	P ActionCode(Cfg)
-		Device PartName(5CEBA4F23) Path("C:/Users/15491959/Desktop/qrt/Aula7-P-SD/part4_qrt/output_files/") File("mem_sram.sof") MfrSpec(OpMask(1));
+		Device PartName(5CEBA4F23) Path("C:/Users/15491959/Desktop/quarts/Aula7-P-SD/part4_qrt/output_files/") File("mem_sram.sof") MfrSpec(OpMask(1));
 
 ChainEnd;
 

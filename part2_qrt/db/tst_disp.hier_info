@@ -1,14 +1,23 @@
 |tst_ram
 address[0] => ram32x4:main_ram.address[0]
+address[0] => display_7seg:addrs_disp1.input_disp[0]
 address[1] => ram32x4:main_ram.address[1]
+address[1] => display_7seg:addrs_disp1.input_disp[1]
 address[2] => ram32x4:main_ram.address[2]
+address[2] => display_7seg:addrs_disp1.input_disp[2]
 address[3] => ram32x4:main_ram.address[3]
+address[3] => display_7seg:addrs_disp1.input_disp[3]
 address[4] => ram32x4:main_ram.address[4]
+address[4] => display_7seg:addrs_disp2.input_disp[0]
 clk => ram32x4:main_ram.clock
 data[0] => ram32x4:main_ram.data[0]
+data[0] => display_7seg:data_dispdd.input_disp[0]
 data[1] => ram32x4:main_ram.data[1]
+data[1] => display_7seg:data_dispdd.input_disp[1]
 data[2] => ram32x4:main_ram.data[2]
+data[2] => display_7seg:data_dispdd.input_disp[2]
 data[3] => ram32x4:main_ram.data[3]
+data[3] => display_7seg:data_dispdd.input_disp[3]
 wren => ram32x4:main_ram.wren
 q[0] << display_7seg:main_disp.out_disp[0]
 q[1] << display_7seg:main_disp.out_disp[1]
@@ -17,6 +26,27 @@ q[3] << display_7seg:main_disp.out_disp[3]
 q[4] << display_7seg:main_disp.out_disp[4]
 q[5] << display_7seg:main_disp.out_disp[5]
 q[6] << display_7seg:main_disp.out_disp[6]
+data_disp[0] << display_7seg:data_dispdd.out_disp[0]
+data_disp[1] << display_7seg:data_dispdd.out_disp[1]
+data_disp[2] << display_7seg:data_dispdd.out_disp[2]
+data_disp[3] << display_7seg:data_dispdd.out_disp[3]
+data_disp[4] << display_7seg:data_dispdd.out_disp[4]
+data_disp[5] << display_7seg:data_dispdd.out_disp[5]
+data_disp[6] << display_7seg:data_dispdd.out_disp[6]
+adr1[0] << display_7seg:addrs_disp1.out_disp[0]
+adr1[1] << display_7seg:addrs_disp1.out_disp[1]
+adr1[2] << display_7seg:addrs_disp1.out_disp[2]
+adr1[3] << display_7seg:addrs_disp1.out_disp[3]
+adr1[4] << display_7seg:addrs_disp1.out_disp[4]
+adr1[5] << display_7seg:addrs_disp1.out_disp[5]
+adr1[6] << display_7seg:addrs_disp1.out_disp[6]
+adr2[0] << display_7seg:addrs_disp2.out_disp[0]
+adr2[1] << display_7seg:addrs_disp2.out_disp[1]
+adr2[2] << display_7seg:addrs_disp2.out_disp[2]
+adr2[3] << display_7seg:addrs_disp2.out_disp[3]
+adr2[4] << display_7seg:addrs_disp2.out_disp[4]
+adr2[5] << display_7seg:addrs_disp2.out_disp[5]
+adr2[6] << display_7seg:addrs_disp2.out_disp[6]
 
 
 |tst_ram|ram32x4:main_ram
@@ -115,6 +145,120 @@ wren_a => ram_block1a3.PORTAWE
 
 
 |tst_ram|display_7seg:main_disp
+input_disp[0] => Mux0.IN19
+input_disp[0] => Mux1.IN19
+input_disp[0] => Mux2.IN19
+input_disp[0] => Mux3.IN19
+input_disp[0] => Mux4.IN19
+input_disp[0] => Mux5.IN19
+input_disp[0] => Mux6.IN19
+input_disp[1] => Mux0.IN18
+input_disp[1] => Mux1.IN18
+input_disp[1] => Mux2.IN18
+input_disp[1] => Mux3.IN18
+input_disp[1] => Mux4.IN18
+input_disp[1] => Mux5.IN18
+input_disp[1] => Mux6.IN18
+input_disp[2] => Mux0.IN17
+input_disp[2] => Mux1.IN17
+input_disp[2] => Mux2.IN17
+input_disp[2] => Mux3.IN17
+input_disp[2] => Mux4.IN17
+input_disp[2] => Mux5.IN17
+input_disp[2] => Mux6.IN17
+input_disp[3] => Mux0.IN16
+input_disp[3] => Mux1.IN16
+input_disp[3] => Mux2.IN16
+input_disp[3] => Mux3.IN16
+input_disp[3] => Mux4.IN16
+input_disp[3] => Mux5.IN16
+input_disp[3] => Mux6.IN16
+out_disp[0] <= Mux6.DB_MAX_OUTPUT_PORT_TYPE
+out_disp[1] <= Mux5.DB_MAX_OUTPUT_PORT_TYPE
+out_disp[2] <= Mux4.DB_MAX_OUTPUT_PORT_TYPE
+out_disp[3] <= Mux3.DB_MAX_OUTPUT_PORT_TYPE
+out_disp[4] <= Mux2.DB_MAX_OUTPUT_PORT_TYPE
+out_disp[5] <= Mux1.DB_MAX_OUTPUT_PORT_TYPE
+out_disp[6] <= Mux0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|tst_ram|display_7seg:data_dispdd
+input_disp[0] => Mux0.IN19
+input_disp[0] => Mux1.IN19
+input_disp[0] => Mux2.IN19
+input_disp[0] => Mux3.IN19
+input_disp[0] => Mux4.IN19
+input_disp[0] => Mux5.IN19
+input_disp[0] => Mux6.IN19
+input_disp[1] => Mux0.IN18
+input_disp[1] => Mux1.IN18
+input_disp[1] => Mux2.IN18
+input_disp[1] => Mux3.IN18
+input_disp[1] => Mux4.IN18
+input_disp[1] => Mux5.IN18
+input_disp[1] => Mux6.IN18
+input_disp[2] => Mux0.IN17
+input_disp[2] => Mux1.IN17
+input_disp[2] => Mux2.IN17
+input_disp[2] => Mux3.IN17
+input_disp[2] => Mux4.IN17
+input_disp[2] => Mux5.IN17
+input_disp[2] => Mux6.IN17
+input_disp[3] => Mux0.IN16
+input_disp[3] => Mux1.IN16
+input_disp[3] => Mux2.IN16
+input_disp[3] => Mux3.IN16
+input_disp[3] => Mux4.IN16
+input_disp[3] => Mux5.IN16
+input_disp[3] => Mux6.IN16
+out_disp[0] <= Mux6.DB_MAX_OUTPUT_PORT_TYPE
+out_disp[1] <= Mux5.DB_MAX_OUTPUT_PORT_TYPE
+out_disp[2] <= Mux4.DB_MAX_OUTPUT_PORT_TYPE
+out_disp[3] <= Mux3.DB_MAX_OUTPUT_PORT_TYPE
+out_disp[4] <= Mux2.DB_MAX_OUTPUT_PORT_TYPE
+out_disp[5] <= Mux1.DB_MAX_OUTPUT_PORT_TYPE
+out_disp[6] <= Mux0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|tst_ram|display_7seg:addrs_disp1
+input_disp[0] => Mux0.IN19
+input_disp[0] => Mux1.IN19
+input_disp[0] => Mux2.IN19
+input_disp[0] => Mux3.IN19
+input_disp[0] => Mux4.IN19
+input_disp[0] => Mux5.IN19
+input_disp[0] => Mux6.IN19
+input_disp[1] => Mux0.IN18
+input_disp[1] => Mux1.IN18
+input_disp[1] => Mux2.IN18
+input_disp[1] => Mux3.IN18
+input_disp[1] => Mux4.IN18
+input_disp[1] => Mux5.IN18
+input_disp[1] => Mux6.IN18
+input_disp[2] => Mux0.IN17
+input_disp[2] => Mux1.IN17
+input_disp[2] => Mux2.IN17
+input_disp[2] => Mux3.IN17
+input_disp[2] => Mux4.IN17
+input_disp[2] => Mux5.IN17
+input_disp[2] => Mux6.IN17
+input_disp[3] => Mux0.IN16
+input_disp[3] => Mux1.IN16
+input_disp[3] => Mux2.IN16
+input_disp[3] => Mux3.IN16
+input_disp[3] => Mux4.IN16
+input_disp[3] => Mux5.IN16
+input_disp[3] => Mux6.IN16
+out_disp[0] <= Mux6.DB_MAX_OUTPUT_PORT_TYPE
+out_disp[1] <= Mux5.DB_MAX_OUTPUT_PORT_TYPE
+out_disp[2] <= Mux4.DB_MAX_OUTPUT_PORT_TYPE
+out_disp[3] <= Mux3.DB_MAX_OUTPUT_PORT_TYPE
+out_disp[4] <= Mux2.DB_MAX_OUTPUT_PORT_TYPE
+out_disp[5] <= Mux1.DB_MAX_OUTPUT_PORT_TYPE
+out_disp[6] <= Mux0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|tst_ram|display_7seg:addrs_disp2
 input_disp[0] => Mux0.IN19
 input_disp[0] => Mux1.IN19
 input_disp[0] => Mux2.IN19

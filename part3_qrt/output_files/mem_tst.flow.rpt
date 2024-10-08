@@ -1,5 +1,5 @@
 Flow report for mem_tst
-Tue Oct  1 16:46:23 2024
+Tue Oct  8 16:09:46 2024
 Quartus Prime Version 21.1.0 Build 842 10/21/2021 SJ Lite Edition
 
 
@@ -41,16 +41,16 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------------------------------------------------+
 ; Flow Summary                                                                  ;
 +---------------------------------+---------------------------------------------+
-; Flow Status                     ; Successful - Tue Oct  1 16:46:17 2024       ;
+; Flow Status                     ; Successful - Tue Oct  8 16:09:40 2024       ;
 ; Quartus Prime Version           ; 21.1.0 Build 842 10/21/2021 SJ Lite Edition ;
 ; Revision Name                   ; mem_tst                                     ;
 ; Top-level Entity Name           ; mem_tst                                     ;
 ; Family                          ; Cyclone V                                   ;
 ; Device                          ; 5CEBA4F23C7                                 ;
 ; Timing Models                   ; Final                                       ;
-; Logic utilization (in ALMs)     ; 74 / 18,480 ( < 1 % )                       ;
+; Logic utilization (in ALMs)     ; 76 / 18,480 ( < 1 % )                       ;
 ; Total registers                 ; 128                                         ;
-; Total pins                      ; 18 / 224 ( 8 % )                            ;
+; Total pins                      ; 39 / 224 ( 17 % )                           ;
 ; Total virtual pins              ; 0                                           ;
 ; Total block memory bits         ; 0 / 3,153,920 ( 0 % )                       ;
 ; Total DSP Blocks                ; 0 / 66 ( 0 % )                              ;
@@ -68,7 +68,7 @@ https://fpgasoftware.intel.com/eula.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 10/01/2024 16:45:35 ;
+; Start date & time ; 10/08/2024 16:09:06 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; mem_tst             ;
 +-------------------+---------------------+
@@ -79,7 +79,7 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------+----------------------------------------+---------------+-------------+------------+
 ; Assignment Name                     ; Value                                  ; Default Value ; Entity Name ; Section Id ;
 +-------------------------------------+----------------------------------------+---------------+-------------+------------+
-; COMPILER_SIGNATURE_ID               ; 10995770589197.172781193512036         ; --            ; --          ; --         ;
+; COMPILER_SIGNATURE_ID               ; 10995770589198.172841454606992         ; --            ; --          ; --         ;
 ; MAX_CORE_JUNCTION_TEMP              ; 85                                     ; --            ; --          ; --         ;
 ; MIN_CORE_JUNCTION_TEMP              ; 0                                      ; --            ; --          ; --         ;
 ; PARTITION_COLOR                     ; -- (Not supported for targeted family) ; --            ; --          ; Top        ;
@@ -94,11 +94,11 @@ https://fpgasoftware.intel.com/eula.
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis ; 00:00:13     ; 1.0                     ; 4868 MB             ; 00:00:18                           ;
-; Fitter               ; 00:00:21     ; 1.0                     ; 6237 MB             ; 00:00:30                           ;
-; Assembler            ; 00:00:03     ; 1.0                     ; 4842 MB             ; 00:00:03                           ;
-; Timing Analyzer      ; 00:00:05     ; 1.1                     ; 5084 MB             ; 00:00:05                           ;
-; Total                ; 00:00:42     ; --                      ; --                  ; 00:00:56                           ;
+; Analysis & Synthesis ; 00:00:08     ; 1.0                     ; 4858 MB             ; 00:00:18                           ;
+; Fitter               ; 00:00:20     ; 1.0                     ; 6233 MB             ; 00:00:32                           ;
+; Assembler            ; 00:00:03     ; 1.0                     ; 4861 MB             ; 00:00:03                           ;
+; Timing Analyzer      ; 00:00:05     ; 1.2                     ; 5085 MB             ; 00:00:05                           ;
+; Total                ; 00:00:36     ; --                      ; --                  ; 00:00:58                           ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 
@@ -107,10 +107,10 @@ https://fpgasoftware.intel.com/eula.
 +----------------------+------------------+------------+------------+----------------+
 ; Module Name          ; Machine Hostname ; OS Name    ; OS Version ; Processor type ;
 +----------------------+------------------+------------+------------+----------------+
-; Analysis & Synthesis ; 6-305-25         ; Windows 10 ; 10.0       ; x86_64         ;
-; Fitter               ; 6-305-25         ; Windows 10 ; 10.0       ; x86_64         ;
-; Assembler            ; 6-305-25         ; Windows 10 ; 10.0       ; x86_64         ;
-; Timing Analyzer      ; 6-305-25         ; Windows 10 ; 10.0       ; x86_64         ;
+; Analysis & Synthesis ; 6-305-23         ; Windows 10 ; 10.0       ; x86_64         ;
+; Fitter               ; 6-305-23         ; Windows 10 ; 10.0       ; x86_64         ;
+; Assembler            ; 6-305-23         ; Windows 10 ; 10.0       ; x86_64         ;
+; Timing Analyzer      ; 6-305-23         ; Windows 10 ; 10.0       ; x86_64         ;
 +----------------------+------------------+------------+------------+----------------+
 
 

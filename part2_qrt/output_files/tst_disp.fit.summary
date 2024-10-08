@@ -1,13 +1,13 @@
-Fitter Status : Successful - Tue Oct  1 15:15:32 2024
+Fitter Status : Successful - Tue Oct  8 16:20:01 2024
 Quartus Prime Version : 21.1.0 Build 842 10/21/2021 SJ Lite Edition
 Revision Name : tst_disp
 Top-level Entity Name : tst_ram
 Family : Cyclone V
 Device : 5CEBA4F23C7
 Timing Models : Final
-Logic utilization (in ALMs) : 4 / 18,480 ( < 1 % )
+Logic utilization (in ALMs) : 11 / 18,480 ( < 1 % )
 Total registers : 0
-Total pins : 18 / 224 ( 8 % )
+Total pins : 39 / 224 ( 17 % )
 Total virtual pins : 0
 Total block memory bits : 128 / 3,153,920 ( < 1 % )
 Total RAM Blocks : 1 / 308 ( < 1 % )

@@ -1,11 +1,11 @@
-Analysis & Synthesis Status : Successful - Tue Oct  1 16:45:50 2024
+Analysis & Synthesis Status : Successful - Tue Oct  8 16:09:15 2024
 Quartus Prime Version : 21.1.0 Build 842 10/21/2021 SJ Lite Edition
 Revision Name : mem_tst
 Top-level Entity Name : mem_tst
 Family : Cyclone V
 Logic utilization (in ALMs) : N/A
 Total registers : 128
-Total pins : 18
+Total pins : 39
 Total virtual pins : 0
 Total block memory bits : 0
 Total DSP Blocks : 0

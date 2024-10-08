@@ -1,5 +1,5 @@
 Analysis & Synthesis report for mem_tst
-Tue Oct  1 16:45:50 2024
+Tue Oct  8 16:09:15 2024
 Quartus Prime Version 21.1.0 Build 842 10/21/2021 SJ Lite Edition
 
 
@@ -14,9 +14,10 @@ Quartus Prime Version 21.1.0 Build 842 10/21/2021 SJ Lite Edition
   6. Analysis & Synthesis Resource Usage Summary
   7. Analysis & Synthesis Resource Utilization by Entity
   8. General Register Statistics
-  9. Post-Synthesis Netlist Statistics for Top Partition
- 10. Elapsed Time Per Partition
- 11. Analysis & Synthesis Messages
+  9. Port Connectivity Checks: "display_7seg:addrs_disp2"
+ 10. Post-Synthesis Netlist Statistics for Top Partition
+ 11. Elapsed Time Per Partition
+ 12. Analysis & Synthesis Messages
 
 
 
@@ -43,14 +44,14 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                  ;
 +---------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Tue Oct  1 16:45:50 2024       ;
+; Analysis & Synthesis Status     ; Successful - Tue Oct  8 16:09:15 2024       ;
 ; Quartus Prime Version           ; 21.1.0 Build 842 10/21/2021 SJ Lite Edition ;
 ; Revision Name                   ; mem_tst                                     ;
 ; Top-level Entity Name           ; mem_tst                                     ;
 ; Family                          ; Cyclone V                                   ;
 ; Logic utilization (in ALMs)     ; N/A                                         ;
 ; Total registers                 ; 128                                         ;
-; Total pins                      ; 18                                          ;
+; Total pins                      ; 39                                          ;
 ; Total virtual pins              ; 0                                           ;
 ; Total block memory bits         ; 0                                           ;
 ; Total DSP Blocks                ; 0                                           ;
@@ -166,15 +167,15 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------+-------------+
 
 
-+-----------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                              ;
-+----------------------------------+-----------------+-----------------------+--------------------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type             ; File Name with Absolute Path                                 ; Library ;
-+----------------------------------+-----------------+-----------------------+--------------------------------------------------------------+---------+
-; mem_tst.vhd                      ; yes             ; User VHDL File        ; C:/Users/15491959/Desktop/emmblck/part3_qrt/mem_tst.vhd      ;         ;
-; ram32x4.vhd                      ; yes             ; Auto-Found VHDL File  ; C:/Users/15491959/Desktop/emmblck/part3_qrt/ram32x4.vhd      ;         ;
-; display_7seg.vhd                 ; yes             ; Auto-Found VHDL File  ; C:/Users/15491959/Desktop/emmblck/part3_qrt/display_7seg.vhd ;         ;
-+----------------------------------+-----------------+-----------------------+--------------------------------------------------------------+---------+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                        ;
++----------------------------------+-----------------+-----------------------+------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type             ; File Name with Absolute Path                                           ; Library ;
++----------------------------------+-----------------+-----------------------+------------------------------------------------------------------------+---------+
+; mem_tst.vhd                      ; yes             ; User VHDL File        ; C:/Users/15491959/Desktop/quarts/Aula7-P-SD/part3_qrt/mem_tst.vhd      ;         ;
+; ram32x4.vhd                      ; yes             ; Auto-Found VHDL File  ; C:/Users/15491959/Desktop/quarts/Aula7-P-SD/part3_qrt/ram32x4.vhd      ;         ;
+; display_7seg.vhd                 ; yes             ; Auto-Found VHDL File  ; C:/Users/15491959/Desktop/quarts/Aula7-P-SD/part3_qrt/display_7seg.vhd ;         ;
++----------------------------------+-----------------+-----------------------+------------------------------------------------------------------------+---------+
 
 
 +---------------------------------------------------------+
@@ -182,37 +183,39 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------+-----------+
 ; Resource                                    ; Usage     ;
 +---------------------------------------------+-----------+
-; Estimate of Logic utilization (ALMs needed) ; 116       ;
+; Estimate of Logic utilization (ALMs needed) ; 118       ;
 ;                                             ;           ;
-; Combinational ALUT usage for logic          ; 75        ;
+; Combinational ALUT usage for logic          ; 89        ;
 ;     -- 7 input functions                    ; 32        ;
 ;     -- 6 input functions                    ; 36        ;
 ;     -- 5 input functions                    ; 0         ;
-;     -- 4 input functions                    ; 7         ;
+;     -- 4 input functions                    ; 21        ;
 ;     -- <=3 input functions                  ; 0         ;
 ;                                             ;           ;
 ; Dedicated logic registers                   ; 128       ;
 ;                                             ;           ;
-; I/O pins                                    ; 18        ;
+; I/O pins                                    ; 39        ;
 ;                                             ;           ;
 ; Total DSP Blocks                            ; 0         ;
 ;                                             ;           ;
 ; Maximum fan-out node                        ; clk~input ;
 ; Maximum fan-out                             ; 128       ;
-; Total fan-out                               ; 877       ;
-; Average fan-out                             ; 3.67      ;
+; Total fan-out                               ; 972       ;
+; Average fan-out                             ; 3.29      ;
 +---------------------------------------------+-----------+
 
 
-+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                  ;
-+-----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------------------+--------------+--------------+
-; Compilation Hierarchy Node  ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name             ; Entity Name  ; Library Name ;
-+-----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------------------+--------------+--------------+
-; |mem_tst                    ; 75 (0)              ; 128 (0)                   ; 0                 ; 0          ; 18   ; 0            ; |mem_tst                        ; mem_tst      ; work         ;
-;    |display_7seg:main_disp| ; 7 (7)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |mem_tst|display_7seg:main_disp ; display_7seg ; work         ;
-;    |ram32x4:main_ram|       ; 68 (68)             ; 128 (128)                 ; 0                 ; 0          ; 0    ; 0            ; |mem_tst|ram32x4:main_ram       ; ram32x4      ; work         ;
-+-----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------------------+--------------+--------------+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                      ;
++-------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-----------------------------------+--------------+--------------+
+; Compilation Hierarchy Node    ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name               ; Entity Name  ; Library Name ;
++-------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-----------------------------------+--------------+--------------+
+; |mem_tst                      ; 89 (0)              ; 128 (0)                   ; 0                 ; 0          ; 39   ; 0            ; |mem_tst                          ; mem_tst      ; work         ;
+;    |display_7seg:addrs_disp1| ; 7 (7)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |mem_tst|display_7seg:addrs_disp1 ; display_7seg ; work         ;
+;    |display_7seg:data_dispdd| ; 7 (7)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |mem_tst|display_7seg:data_dispdd ; display_7seg ; work         ;
+;    |display_7seg:main_disp|   ; 7 (7)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |mem_tst|display_7seg:main_disp   ; display_7seg ; work         ;
+;    |ram32x4:main_ram|         ; 68 (68)             ; 128 (128)                 ; 0                 ; 0          ; 0    ; 0            ; |mem_tst|ram32x4:main_ram         ; ram32x4      ; work         ;
++-------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-----------------------------------+--------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
@@ -231,6 +234,15 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 
 
++------------------------------------------------------+
+; Port Connectivity Checks: "display_7seg:addrs_disp2" ;
++------------------+-------+----------+----------------+
+; Port             ; Type  ; Severity ; Details        ;
++------------------+-------+----------+----------------+
+; input_disp[3..1] ; Input ; Info     ; Stuck at GND   ;
++------------------+-------+----------+----------------+
+
+
 +-----------------------------------------------------+
 ; Post-Synthesis Netlist Statistics for Top Partition ;
 +-----------------------+-----------------------------+
@@ -238,17 +250,18 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +-----------------------+-----------------------------+
 ; arriav_ff             ; 128                         ;
 ;     ENA               ; 128                         ;
-; arriav_lcell_comb     ; 76                          ;
+; arriav_lcell_comb     ; 94                          ;
 ;     extend            ; 32                          ;
 ;         7 data inputs ; 32                          ;
-;     normal            ; 44                          ;
-;         1 data inputs ; 1                           ;
-;         4 data inputs ; 7                           ;
+;     normal            ; 62                          ;
+;         0 data inputs ; 2                           ;
+;         1 data inputs ; 3                           ;
+;         4 data inputs ; 21                          ;
 ;         6 data inputs ; 36                          ;
-; boundary_port         ; 18                          ;
+; boundary_port         ; 39                          ;
 ;                       ;                             ;
 ; Max LUT depth         ; 5.00                        ;
-; Average LUT depth     ; 3.93                        ;
+; Average LUT depth     ; 3.74                        ;
 +-----------------------+-----------------------------+
 
 
@@ -257,7 +270,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:01     ;
+; Top            ; 00:00:00     ;
 +----------------+--------------+
 
 
@@ -267,35 +280,39 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 21.1.0 Build 842 10/21/2021 SJ Lite Edition
-    Info: Processing started: Tue Oct  1 16:45:35 2024
+    Info: Processing started: Tue Oct  8 16:09:06 2024
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off mem_tst -c mem_tst
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
 Info (12021): Found 2 design units, including 1 entities, in source file mem_tst.vhd
-    Info (12022): Found design unit 1: mem_tst-Behaviour File: C:/Users/15491959/Desktop/emmblck/part3_qrt/mem_tst.vhd Line: 17
-    Info (12023): Found entity 1: mem_tst File: C:/Users/15491959/Desktop/emmblck/part3_qrt/mem_tst.vhd Line: 5
+    Info (12022): Found design unit 1: mem_tst-Behaviour File: C:/Users/15491959/Desktop/quarts/Aula7-P-SD/part3_qrt/mem_tst.vhd Line: 19
+    Info (12023): Found entity 1: mem_tst File: C:/Users/15491959/Desktop/quarts/Aula7-P-SD/part3_qrt/mem_tst.vhd Line: 5
 Info (12127): Elaborating entity "mem_tst" for the top level hierarchy
 Warning (12125): Using design file ram32x4.vhd, which is not specified as a design file for the current project, but contains definitions for 2 design units and 1 entities in project
-    Info (12022): Found design unit 1: ram32x4-Behaviour File: C:/Users/15491959/Desktop/emmblck/part3_qrt/ram32x4.vhd Line: 15
-    Info (12023): Found entity 1: ram32x4 File: C:/Users/15491959/Desktop/emmblck/part3_qrt/ram32x4.vhd Line: 5
-Info (12128): Elaborating entity "ram32x4" for hierarchy "ram32x4:main_ram" File: C:/Users/15491959/Desktop/emmblck/part3_qrt/mem_tst.vhd Line: 39
+    Info (12022): Found design unit 1: ram32x4-Behaviour File: C:/Users/15491959/Desktop/quarts/Aula7-P-SD/part3_qrt/ram32x4.vhd Line: 15
+    Info (12023): Found entity 1: ram32x4 File: C:/Users/15491959/Desktop/quarts/Aula7-P-SD/part3_qrt/ram32x4.vhd Line: 5
+Info (12128): Elaborating entity "ram32x4" for hierarchy "ram32x4:main_ram" File: C:/Users/15491959/Desktop/quarts/Aula7-P-SD/part3_qrt/mem_tst.vhd Line: 43
 Warning (12125): Using design file display_7seg.vhd, which is not specified as a design file for the current project, but contains definitions for 2 design units and 1 entities in project
-    Info (12022): Found design unit 1: display_7seg-Behaviour File: C:/Users/15491959/Desktop/emmblck/part3_qrt/display_7seg.vhd Line: 12
-    Info (12023): Found entity 1: display_7seg File: C:/Users/15491959/Desktop/emmblck/part3_qrt/display_7seg.vhd Line: 5
-Info (12128): Elaborating entity "display_7seg" for hierarchy "display_7seg:main_disp" File: C:/Users/15491959/Desktop/emmblck/part3_qrt/mem_tst.vhd Line: 48
+    Info (12022): Found design unit 1: display_7seg-Behaviour File: C:/Users/15491959/Desktop/quarts/Aula7-P-SD/part3_qrt/display_7seg.vhd Line: 12
+    Info (12023): Found entity 1: display_7seg File: C:/Users/15491959/Desktop/quarts/Aula7-P-SD/part3_qrt/display_7seg.vhd Line: 5
+Info (12128): Elaborating entity "display_7seg" for hierarchy "display_7seg:main_disp" File: C:/Users/15491959/Desktop/quarts/Aula7-P-SD/part3_qrt/mem_tst.vhd Line: 52
 Info (276014): Found 1 instances of uninferred RAM logic
-    Info (276007): RAM logic "ram32x4:main_ram|mem_array" is uninferred due to asynchronous read logic File: C:/Users/15491959/Desktop/emmblck/part3_qrt/ram32x4.vhd Line: 18
+    Info (276007): RAM logic "ram32x4:main_ram|mem_array" is uninferred due to asynchronous read logic File: C:/Users/15491959/Desktop/quarts/Aula7-P-SD/part3_qrt/ram32x4.vhd Line: 18
+Warning (13024): Output pins are stuck at VCC or GND
+    Warning (13410): Pin "adr2[0]" is stuck at VCC File: C:/Users/15491959/Desktop/quarts/Aula7-P-SD/part3_qrt/mem_tst.vhd Line: 14
+    Warning (13410): Pin "adr2[4]" is stuck at GND File: C:/Users/15491959/Desktop/quarts/Aula7-P-SD/part3_qrt/mem_tst.vhd Line: 14
+    Warning (13410): Pin "adr2[5]" is stuck at GND File: C:/Users/15491959/Desktop/quarts/Aula7-P-SD/part3_qrt/mem_tst.vhd Line: 14
 Info (286030): Timing-Driven Synthesis is running
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 221 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 256 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 11 input pins
-    Info (21059): Implemented 7 output pins
-    Info (21061): Implemented 203 logic cells
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 3 warnings
-    Info: Peak virtual memory: 4868 megabytes
-    Info: Processing ended: Tue Oct  1 16:45:50 2024
-    Info: Elapsed time: 00:00:15
+    Info (21059): Implemented 28 output pins
+    Info (21061): Implemented 217 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 7 warnings
+    Info: Peak virtual memory: 4858 megabytes
+    Info: Processing ended: Tue Oct  8 16:09:15 2024
+    Info: Elapsed time: 00:00:09
     Info: Total CPU time (on all processors): 00:00:18
 
 
