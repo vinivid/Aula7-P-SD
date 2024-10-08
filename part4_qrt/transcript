@@ -1,0 +1,43 @@
+# Compile of rollcounter.vhd was successful.
+vsim -gui work.rollcounter
+# vsim -gui work.rollcounter 
+# Start time: 14:42:32 on Oct 08,2024
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading work.rollcounter(behaviour)
+add wave -position insertpoint sim:/rollcounter/*
+force -freeze sim:/rollcounter/clk 1 0, 0 {50 ps} -r 100
+run
+force -freeze sim:/rollcounter/enable 1 0
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+# End time: 14:58:46 on Oct 08,2024, Elapsed time: 0:16:14
+# Errors: 0, Warnings: 0

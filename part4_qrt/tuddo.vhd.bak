@@ -77,21 +77,18 @@ architecture Behaviour of tuddo is
     signal adres_left : STD_LOGIC_VECTOR (3 downto 0) := (others => '0');
     signal wr_add_right : STD_LOGIC_VECTOR (3 downto 0) := (others => '0');
     signal wr_add_left : STD_LOGIC_VECTOR (3 downto 0) := (others => '0');
-	 
-	 signal true_reset : STD_LOGIC;
 begin
-	true_reset <= not reset;
-	
+
     f_sec: rollcounter
      generic map(
-        modulo => 50000000,
+        modulo => 55000000,
         max => 60000000,
         min => 0
     )
      port map(
         clk => clk,
         enable => '1',
-        reset => true_reset,
+        reset => reset,
         counter => mi_count,
         rollout => middle
     );
@@ -105,7 +102,7 @@ begin
      port map(
         clk =>  middle,
         enable => '1',
-        reset => true_reset,
+        reset => reset,
         counter => addres_out
     );
 
@@ -147,7 +144,7 @@ begin
 
     write1: display_7seg
      port map(
-        input_disp => wr_add_right,
+        input_disp => wr_add_left,
         out_disp => out_disp_write_1
     );
 
